@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "flappy_bird_game_backend": {
+      "main": "src/flappy_bird_game_backend/main.mo",
+      "type": "motoko"
+    },
+    "flappy_bird_game_frontend": {
+      "dependencies": [
+        "flappy_bird_game_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/flappy_bird_game_frontend/src/index.html"
+      },
+      "source": [
+        "src/flappy_bird_game_frontend/assets",
+        "dist/flappy_bird_game_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
